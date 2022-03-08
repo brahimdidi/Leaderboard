@@ -5,7 +5,7 @@ const nameInput = document.getElementById('name');
 const scoreInput = document.getElementById('score');
 
 const scoreList = document.querySelector('.score-list');
-
+const ul = document.getElementById('ul');
 const list = [];
 
 localStorage.setItem('list', JSON.stringify(list));
@@ -15,9 +15,10 @@ form.addEventListener('submit', (e) => {
   const name = nameInput.value;
   const score = scoreInput.value;
 
-  const ul = document.getElementById('ul');
+  
   const li = document.createElement('li');
-  li.innerHTML = `<li class="name-score">${name}: ${score}</li>`;
+  li.innerHTML = `<li class="name-score"><span>${name}: ${score} <span></li>`;
+  li.classList.add('name-score');
   ul.appendChild(li);
   const obj = { Name: name, Score: score };
   list.push(obj);
