@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>title</title>
+    <title>DD Leaderboard Project </title>
 </head>
 <body>
-    <h1>Header 1</h1>
+    <h1>Leaderboard Project</h1>
+
+    <form id="form">
+        <label for="name"></label>
+        <input type="text" id="name" class="score" placeholder="Enter your name" required>
+
+
+        <label for="score"></label>
+        <input type="text" id="score" class="score" placeholder="Enter your score" required>
+
+        <button type="submit" class="submit">submit</button>
+    </form>
+
+    <div class="score-list"></div>
+    <script src="index.js" type="module"></script>
 </body>
 </html>
