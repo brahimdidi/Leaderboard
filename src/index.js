@@ -6,6 +6,10 @@ const scoreInput = document.getElementById('score');
 
 const scoreList = document.querySelector('.score-list');
 
+const list = [];
+
+localStorage.setItem('list', JSON.stringify(list));
+
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const name = nameInput.value;
@@ -16,7 +20,10 @@ form.addEventListener('submit', (e) => {
   li.innerHTML = `<li class="name-score">${name}: ${score}</li>`;
   scoreList.appendChild(ul);
   ul.appendChild(li);
+  const obj = { Name: name, Score: score };
+  list.push(obj);
 
   nameInput.value = '';
   scoreInput.value = '';
+  localStorage.setItem('list', JSON.stringify(list));
 });
