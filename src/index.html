@@ -7,8 +7,22 @@
 </head>
 <body>
     <h1>Leaderboard Project</h1>
+    <main id ="main">
+        <div class="score-list">
+            <div class="rs-div"> 
+            <h2 class="recent-scores">recent scores</h2>
+            <button class="refresh">refresh</button>
+           </div>
+
+            <ul id="ul">
+                <li class="name-score">Bamo: 2020</li>
+                <li class="name-score">Bamo: 2030</li>
+                <li class="name-score">Bamo: 2040</li>
+            </ul>
+        </div>
 
     <form id="form">
+        <h2 class="add-scores">add your score</h2>
         <label for="name"></label>
         <input type="text" id="name" class="score" placeholder="Enter your name" required>
 
@@ -19,7 +33,7 @@
         <button type="submit" class="submit">submit</button>
     </form>
 
-    <div class="score-list"></div>
+</main>
     <script src="index.js" type="module"></script>
 </body>
 </html>

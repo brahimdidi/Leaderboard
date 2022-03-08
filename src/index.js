@@ -15,10 +15,9 @@ form.addEventListener('submit', (e) => {
   const name = nameInput.value;
   const score = scoreInput.value;
 
-  const ul = document.createElement('ul');
+  const ul = document.getElementById('ul');
   const li = document.createElement('li');
   li.innerHTML = `<li class="name-score">${name}: ${score}</li>`;
-  scoreList.appendChild(ul);
   ul.appendChild(li);
   const obj = { Name: name, Score: score };
   list.push(obj);
