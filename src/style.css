@@ -1,0 +1,89 @@
+* {
+  text-transform: capitalize;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: xx-large;
+  font-weight: bold;
+  padding-left: 10%;
+}
+
+#main {
+  display: flex;
+  width: 800px;
+  max-height: 400px;
+  gap: 5%;
+  margin: 0 auto;
+  margin-top: 20%;
+}
+
+form,
+.score-list {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.score-list {
+  width: 50%;
+}
+
+#ul {
+  padding: unset;
+  border: 2px solid black;
+}
+
+.name-score {
+  border: unset;
+  font-size: large;
+  padding: 6px;
+}
+
+.name-score:nth-child(even) {
+  background: rgb(255, 250, 250);
+}
+
+.name-score:nth-child(odd) {
+  background: rgb(146, 143, 143);
+}
+
+.rs-div {
+  display: flex;
+  justify-content: space-around;
+  max-height: 130px;
+}
+
+.refresh {
+  height: 50%;
+  margin-top: 15px;
+  width: 140px;
+}
+
+#form {
+  margin-top: 50px;
+  gap: 10px;
+}
+
+#form .submit {
+  width: 50%;
+  margin-left: 130px;
+  height: 30px;
+}
+
+button,
+input {
+  border: 2px solid black;
+}
+
+input {
+  height: 40px;
+  padding-inline-start: 4px;
+  font-size: large;
+}
+
+button {
+  cursor: pointer;
+  font-size: large;
+}
