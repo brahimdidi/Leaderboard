@@ -4,12 +4,14 @@
   box-sizing: border-box;
   border-radius: 10px;
 }
+
 :root {
   --color-1: white;
   --color-2: rgb(153, 140, 140);
 }
+
 body {
-    background:linear-gradient(var(--color-2), var(--color-1));;
+  background: linear-gradient(var(--color-2), var(--color-1));
 }
 
 h1 {
@@ -39,7 +41,6 @@ form,
 }
 
 #ul {
-  padding: unset;
   max-height: 500px;
   display: flex;
   flex-direction: column;
@@ -49,6 +50,7 @@ form,
   gap: 6px;
   scroll-behavior: smooth;
 }
+
 #ul::-webkit-scrollbar {
   width: 10px;
 }
@@ -75,7 +77,7 @@ form,
 }
 
 .name-score:nth-child(even) {
-  background:var(--color-2);
+  background: var(--color-2);
   color: white;
 }
 
@@ -89,6 +91,7 @@ form,
   justify-content: space-around;
   max-height: 130px;
 }
+
 .score-list h2 {
   font-size: 27px;
 }
@@ -149,6 +152,7 @@ button:hover {
   display: flex;
   justify-content: start;
 }
+
 .footer h4 {
   font-size: 22px;
   font-weight: bold;
