@@ -2,6 +2,7 @@
   text-transform: capitalize;
   list-style: none;
   box-sizing: border-box;
+  border-radius: 10px;
 }
 
 h1 {
@@ -16,7 +17,7 @@ h1 {
   max-height: 400px;
   gap: 5%;
   margin: 0 auto;
-  margin-top: 20%;
+  margin-top: 100px;
 }
 
 form,
@@ -33,6 +34,12 @@ form,
 #ul {
   padding: unset;
   border: 2px solid black;
+  max-height: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  transition: 0.4s ease-in;
+  background-color: gray;
 }
 
 .name-score {
@@ -42,11 +49,13 @@ form,
 }
 
 .name-score:nth-child(even) {
-  background: rgb(255, 250, 250);
+  background: rgb(75, 62, 62);
+  color: aqua;
 }
 
 .name-score:nth-child(odd) {
-  background: rgb(146, 143, 143);
+  background: black;
+  color: white;
 }
 
 .rs-div {
@@ -81,9 +90,18 @@ input {
   height: 40px;
   padding-inline-start: 4px;
   font-size: large;
+  background-color: grey;
+}
+
+input::placeholder {
+  color: rgb(49, 71, 71);
 }
 
 button {
   cursor: pointer;
   font-size: large;
+}
+
+button:hover {
+  background-color: aqua;
 }
