@@ -1,5 +1,4 @@
 const form = document.getElementById('form');
-
 const ul = document.getElementById('ul');
 const refreshBtn = document.querySelector('.refresh');
 
@@ -17,11 +16,13 @@ const createGame = () => {
   });
 };
 
-const gameId = 'axmeYdCwAotArdTkTlSX';
+const gameId = 'OaM9MJ0X73D4lezjGoUM';
 const url = `${apiUrl}/games/${gameId}/scores/`;
+
 const postData = async () => {
   const nameInput = document.getElementById('name');
   const scoreInput = document.getElementById('score');
+
   await fetch(`${url}`, {
     method: 'Post',
     headers: {
