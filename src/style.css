@@ -11,22 +11,39 @@
 }
 
 body {
-  background: linear-gradient(var(--color-2), var(--color-1));
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 9s ease infinite;
+	height: 100vh;
 }
 
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 h1 {
   font-size: xx-large;
   font-weight: bold;
-  padding-left: 10%;
+  padding: 20px;
+  margin: 30px 50px;
 }
 
 #main {
   display: flex;
   width: 900px;
-  max-height: 400px;
+  max-height: 485px;
   gap: 5%;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 90px;
+  border: 2px groove brown;
+  padding: 20px;
 }
 
 form,
@@ -38,17 +55,19 @@ form,
 
 .score-list {
   width: 70%;
+  gap: 10px;
 }
 
 #ul {
-  max-height: 500px;
+  max-height: 300px;
   display: flex;
   flex-direction: column;
-  transition: 0.4s ease-in;
+  transition: 2s ease-in-out;
   overflow: auto;
   padding: 3px;
   gap: 6px;
   scroll-behavior: smooth;
+  margin-bottom: 10px;
 }
 
 #ul::-webkit-scrollbar {
@@ -57,12 +76,14 @@ form,
 
 /* Track */
 #ul::-webkit-scrollbar-track {
-  background: var(--color-2);
+  background: grey;
+  border-radius: 30%;
 }
 
 /* Handle */
 #ul::-webkit-scrollbar-thumb {
-  background: var(--color-1);
+  background: white;
+  border-radius: 30%;
 }
 
 /* Handle on hover */
@@ -72,11 +93,12 @@ form,
 
 .name-score {
   border: 1.6px groove lightslategray;
-  font-size: 20px;
+  font-size: 24px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding: 16px;
 }
 
-.name-score:nth-child(even) {
+/* .name-score:nth-child(even) {
   background: var(--color-2);
   color: white;
 }
@@ -84,7 +106,7 @@ form,
 .name-score:nth-child(odd) {
   background: var(--color-1);
   color: #0e0909;
-}
+} */
 
 .rs-div {
   display: flex;
@@ -93,11 +115,14 @@ form,
 }
 
 .score-list h2 {
-  font-size: 27px;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1px;
+  padding: 4px;
 }
 
 .refresh {
-  margin-top: 13px;
   background-color: var(--color-1);
   border-radius: 50%;
   cursor: pointer;
@@ -109,36 +134,27 @@ form,
 }
 
 #form .submit {
+  margin-top: 25px;
+  cursor: pointer;
   width: 50%;
-  margin-left: 130px;
-  height: 30px;
+  margin: 0 auto;
 }
-
-button,
-input {
-  border: 2px solid black;
+.submit:hover {
+  opacity: 0.7;
 }
 
 input {
   height: 40px;
-  padding-inline-start: 4px;
+  padding-inline-start: 9px;
   font-size: large;
   background-color: var(--color-2);
+  opacity: 0.8;
+  border: 2px solid beige;
 }
 
 input::placeholder {
   color: white;
-}
-
-button {
-  cursor: pointer;
-  font-size: large;
-  background-color: var(--color-1);
-  color: var(--color-2);
-}
-
-button:hover {
-  opacity: 0.4;
+  font-size: 20px;
 }
 
 .footer {
@@ -147,7 +163,6 @@ button:hover {
   bottom: 0;
   width: 100%;
   height: 70px;
-  background-color: var(--color-2);
   border-radius: unset;
   display: flex;
   justify-content: start;
@@ -160,3 +175,75 @@ button:hover {
   align-items: center;
   padding-left: 50px;
 }
+
+button {
+    display: flex;
+    justify-content: center;
+    transition-duration: 0;
+    transition-property: color background border box-shadow;
+    transition-timing-function: ease-in;
+    margin: 0 0 0.875em 0;
+    border-width: 0.125em;
+
+    border-style: solid;
+    border-radius: 0.5em;
+  
+    border-color: currentColor;
+    
+    box-shadow: 0 0.375em 0 currentColor;
+   
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: rgb(145, 207, 20);
+    
+    cursor: pointer;
+    padding: calc((4em - (1em * 1.5) - (0.125em * 2) - 0.375em) / 2) calc(1em * 1.5);
+    
+    vertical-align: middle;
+    text-align: center;
+
+    
+   text-transform: uppercase;
+   letter-spacing: 1.5px;
+    
+    color: #183153;
+    
+    font-weight: 600;
+}
+
+/* Mobile versions styling */
+
+/* @media screen and (max-width: 910px) {
+  #main {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width:600px) {
+  .title {
+    font-size: 2.5rem;
+    display: block;
+    padding: 20px;
+  }
+  #main {
+   max-width: unset;
+   max-height: 600px;
+   flex-direction: column;
+   width: 100%;
+   margin-top: 30px;
+   border: unset;
+  }
+  .score-list, #form{
+    width: 100%;
+  }
+  .footer {
+    display: none;
+  }
+  .recent-scores {
+    font-size: 15px;
+  }
+  .add-scores {
+    margin: 0 auto;
+  }
+} */
+
