@@ -214,7 +214,7 @@ button {
 
 /* Mobile versions styling */
 
-/* @media screen and (max-width: 910px) {
+@media screen and (max-width: 910px) {
   #main {
     max-width: 90%;
   }
@@ -245,5 +245,5 @@ button {
   .add-scores {
     margin: 0 auto;
   }
-} */
+}
 
