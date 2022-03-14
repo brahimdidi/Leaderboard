@@ -19,7 +19,7 @@ through apis using async promices.
 
 
 ## Live Demo
-[Live Demo](https://brahimdidi.github.io/Leaderboard/)
+[Live Demo]https://brahimdidi.github.io/Leaderboard/)
 
 ## Getting Started
 
