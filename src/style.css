@@ -43,8 +43,8 @@ h1 {
 }
 
 .ul-loading {
-  overflow: hidden;
-  transition: unset;
+  overflow: hidden !important;
+  transition: unset !important;
 }
 
 .loader {

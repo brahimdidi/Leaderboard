@@ -43,7 +43,7 @@ const getData = async () => {
 const addLoading = () => {
   ul.innerHTML = '';
   loader.classList.remove('d-none');
-  loader.classList.add('ul-loading');
+  ul.classList.add('ul-loading');
   ul.appendChild(loader);
 };
 
