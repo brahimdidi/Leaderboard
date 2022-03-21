@@ -179,9 +179,18 @@ input {
   height: 40px;
   padding-inline-start: 9px;
   font-size: large;
-  background-color: var(--color-2);
+  background-color: rgb(112, 93, 93);
   opacity: 0.8;
-  border: 2px solid beige;
+  border: 2px solid rgb(42, 42, 35);
+}
+
+input[type=number] {
+  width: 50%;
+  margin: 0 auto;
+}
+
+input:focus {
+  background-color: white;
 }
 
 input::placeholder {
