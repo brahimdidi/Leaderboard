@@ -1,6 +1,9 @@
 const form = document.getElementById('form');
 const ul = document.getElementById('ul');
 const refreshBtn = document.querySelector('.refresh');
+const loader = document.createElement('div');
+loader.classList.add('loader');
+loader.classList.add('d-none');
 
 const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api';
 
@@ -37,14 +40,27 @@ const getData = async () => {
   const data = await response.json();
   return data.result;
 };
+const addLoading = () => {
+  ul.innerHTML = '';
+  loader.classList.remove('d-none');
+  loader.classList.add('ul-loading');
+  ul.appendChild(loader);
+};
+
+const removeLoading = () => {
+  loader.classList.add('d-none');
+  loader.classList.remove('ul-loading');
+};
 
 const display = async () => {
   ul.innerHTML = '';
+  addLoading();
   const data = await getData();
   const myList = data.map((item) => {
     const listItems = `<li class="name-score"><span class="ns-text">${item.user}: ${item.score}</span></li>`;
     return listItems;
   });
+  removeLoading();
   ul.innerHTML = myList.join('');
 };
 
